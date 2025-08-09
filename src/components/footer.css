@@ -1,0 +1,157 @@
+/* =============================
+        Footer Styles
+============================= */
+.footer {
+  background-color: #0d1b2a; /* Dark Blue */
+  color: #e0e0e0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 3rem 2rem 1rem;
+}
+
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Footer Sections */
+.footer-section {
+  flex: 1 1 220px;
+  min-width: 200px;
+  
+}
+
+.footer-logo-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.footer-logo-img {
+  width: 160px;
+  height: auto;
+  object-fit: contain;
+}
+
+.contact-info p {
+  margin: 6px 0;
+  font-size: 0.95rem;
+  color: #cfd8dc;
+  text-align: start;
+}
+
+.contact-info a {
+  color: #90caf9;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+  color: #42a5f5;
+}
+
+/* Links Sections */
+.footer-links-section h4,
+.footer-contact-section h4 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #bbdefb;
+  font-weight: 600;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section ul li {
+  margin: 8px 0;
+}
+
+.footer-section ul li a {
+  color: #90caf9;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+  color: #42a5f5;
+}
+
+/* Get In Touch Section */
+.footer-contact-section p {
+  font-size: 0.95rem;
+  margin: 8px 0;
+  color: #cfd8dc;
+}
+
+.contact-link {
+  color: #90caf9;
+  text-decoration: underline;
+}
+
+.contact-link:hover {
+  color: #42a5f5;
+}
+.position-5{
+  display: flex;
+  justify-content: center;
+  
+}
+/* Button */
+.btn-primary {
+  display: inline-block;
+  background-color: #42a5f5;
+  color: white;
+  padding: 0.6rem 1.4rem;
+  border-radius: 6px;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #1e88e5;
+  text-decoration: none;
+  color: white;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  text-align: center;
+ 
+  padding-top: 1rem;
+  font-size: 0.9rem;
+  color: #78909c;
+  border-top: 1px solid #294157;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  
+  .footer-container {
+    flex-direction: column;
+    
+    text-align: center;
+  }
+
+  .footer-section {
+    min-width: auto;
+    width: 100%;
+    
+  }
+
+  .footer-logo-section {
+    align-items: center;
+  }
+}

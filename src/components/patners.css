@@ -1,0 +1,44 @@
+.partners-slider-wrapper {
+  overflow: hidden;
+  width: 100%;
+  padding: 30px 0;
+  background-color: #f4f4f4;
+}
+
+.partners-slider-track {
+  display: flex;
+  width: calc(250px * 16); /* 8 logos duplicated => 16 items */
+  animation: scroll 20s linear infinite;
+}
+
+.partner-logo {
+  flex: 0 0 auto;
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  transition: transform 0.3s ease;
+}
+
+.partner-logo img {
+  max-width: 100%;
+  max-height: 80px;
+  object-fit: contain;
+  opacity: 0.8;
+  transition: opacity 0.3s;
+}
+
+.partner-logo:hover img {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}

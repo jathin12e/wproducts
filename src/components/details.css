@@ -1,0 +1,268 @@
+:root {
+  --bg: #ffffff;
+  --muted: #6b7280;
+  --accent: #111827;
+  --primary: #ff6f00;
+  --card-border: #e5e7eb;
+  --soft: #fafafa;
+}
+
+/* Wrapper */
+.pd-wrap {
+  background: var(--bg);
+  padding: 30px 16px;
+  font-family: "Segoe UI", Roboto, sans-serif;
+}
+
+.pd-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Breadcrumbs */
+.pd-breadcrumbs {
+  font-size: 14px;
+  margin-bottom: 16px;
+  color: var(--muted);
+}
+.pd-link {
+  color: var(--primary);
+  text-decoration: none;
+}
+.pd-link:hover {
+  text-decoration: underline;
+}
+.pd-sep {
+  margin: 0 5px;
+}
+.pd-current {
+  font-weight: 600;
+  color: var(--accent);
+}
+
+/* Main Grid (desktop/tablet) */
+.pd-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  align-items: start;
+  box-sizing: border-box;
+}
+
+/* Product Image */
+.pd-gallery {
+  border: 1px solid var(--card-border);
+  border-radius: 8px;
+  padding: 15px;
+  background: #fff;
+  box-sizing: border-box;
+}
+.pd-main {
+  height: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.pd-main img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+.pd-main img:hover {
+  transform: scale(1.05);
+}
+
+/* Product Info */
+.pd-info {
+  padding: 10px;
+  box-sizing: border-box;
+}
+.pd-title {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+.pd-price {
+  font-size: 1.6rem;
+  color: var(--primary);
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.pd-desc {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+/* Specs */
+.pd-specs {
+  margin-bottom: 16px;
+}
+.pd-specs h3 {
+  margin: 0 0 8px 0;
+  font-size: 15px;
+}
+.pd-specs ul {
+  margin: 0;
+  padding-left: 16px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* Actions */
+.pd-actions {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.pd-qty {
+  display: flex;
+  flex-direction: column;
+}
+.pd-qty-controls {
+  display: flex;
+  gap: 6px;
+}
+.pd-qty-controls button {
+  width: 34px;
+  height: 34px;
+  border: 1px solid var(--card-border);
+  background: #fff;
+  cursor: pointer;
+  font-size: 16px;
+}
+.pd-qty-controls input {
+  width: 50px;
+  text-align: center;
+  border: 1px solid var(--card-border);
+}
+
+/* Buttons */
+.btn {
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+}
+.btn.primary {
+  background: var(--primary);
+  color: #fff;
+}
+.btn.buy-now {
+  background: #f1f1f1;
+  color: var(--accent);
+}
+
+/* Related Products - desktop grid */
+/* Related Products - always horizontal scroll */
+/* Related Products - Always Horizontal Scroll */
+.related-section {
+  margin-top: 50px;
+}
+
+.related-grid {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  padding: 10px 6px;
+  scroll-snap-type: x mandatory;
+}
+
+.related-card {
+  flex: 0 0 220px; /* Card width */
+  min-width: 220px;
+  background: #fff;
+  border: 1px solid var(--card-border);
+  border-radius: 8px;
+  padding: 10px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-align: center;
+  scroll-snap-align: start;
+}
+
+.related-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.related-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: contain;
+}
+
+.related-info h4 {
+  font-size: 14px;
+  margin: 10px 0 4px;
+}
+
+.rel-price {
+  color: var(--primary);
+  font-weight: bold;
+}
+
+/* Scrollbar Styling */
+.related-grid::-webkit-scrollbar {
+  height: 9px;
+}
+.related-grid::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.12);
+  border-radius: 8px;
+}
+.related-grid::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Small Screens */
+@media (max-width: 500px) {
+  .related-card {
+    flex: 0 0 160px;
+    min-width: 160px;
+  }
+  .related-card img {
+    height: 120px;
+  }
+}
+
+
+/* -------------------------------------------
+   MOBILE: only make RELATED PRODUCTS scroll horizontally
+   Keep the main .pd-grid stacked (no horizontal scroll)
+   ------------------------------------------- */
+@media (max-width: 900px) {
+  /* Keep main product stack: single column layout */
+  .pd-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .pd-main {
+    height: 350px;
+  }
+
+  /* Make related products a horizontal scroll carousel */
+  
+
+  /* Each card becomes a fixed-width item in the carousel */
+  
+}
+
+/* Extra small screens */
+@media (max-width: 500px) {
+  .pd-main {
+    height: 250px;
+  }
+
+}
