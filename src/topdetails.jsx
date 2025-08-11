@@ -174,17 +174,7 @@ export default function TopDetails() {
 
               <div className="pd-actions">
                 <div className="pd-qty">
-                  <label>Quantity</label>
-                  <div className="pd-qty-controls">
-                    <button onClick={() => setQty((q) => Math.max(1, q - 1))}>−</button>
-                    <input
-                      type="number"
-                      value={qty}
-                      min={1}
-                      onChange={(e) => setQty(Math.max(1, Number(e.target.value) || 1))}
-                    />
-                    <button onClick={() => setQty((q) => q + 1)}>+</button>
-                  </div>
+                 
                   <div className="pd-action-buttons">
                   <button className="btn primary" onClick={() => handleAdd()}>
                     🛒 Add to Cart
@@ -196,7 +186,7 @@ export default function TopDetails() {
                       navigate(`/enquiry?product=${encodeURIComponent(product.name)}`)
                     }
                   >
-                    Enquiry Now
+                    Product Enquiry
                   </button>
                 </div>
                 </div>

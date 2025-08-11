@@ -318,6 +318,14 @@ const productData = {
         specs: { types: "Single/Variable speed", inlet: "Various" }
       },
       {
+        name: "Heat Pump",
+        price: "₹25000",
+        img: "/product/Screenshot 2025-08-11 131224.png",
+        description:
+          "Swimming Pool Heat Pumps are high capacity heating systems that can raise the temperature of the swimming pool water from ambient to a set temperature (27 ~ 35°C) and maintain the temperature. These heat pumps find their application in swimming pools in clubs, resorts and bungalows.",
+        specs: { "Heating Capacity": "24.0", COP: "5.3", "power supply":"38V/3N/5Hz", "Input Power":"4.62" , "Input Current" :"7.0"}
+      },
+      {
         name: "Pool Skimmer",
         price: "₹32,200/piece",
         img: "/product/Screenshot 2025-08-06 130118.png",
